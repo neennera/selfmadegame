@@ -37,7 +37,12 @@ function App() {
               <p className="italic">{show ? "hide" : "show"}</p>
             </button>
           </div>
-          <div className="relative w-1/2 h-full flex items-center justify-center">
+          <div
+            className="relative w-1/2 h-full flex items-center justify-center"
+            onClick={() => {
+              setShow(!show);
+            }}
+          >
             <p className="absolute text-[6rem] mt-[10%]">{scale}</p>
             {show && (
               <div className="absolute w-[200px] h-[80%] rounded-sm bg-slate-200"></div>
